@@ -1,0 +1,720 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Man-Ser - Conozca nuestra empresa, visión, misión y valores. Especialistas en soluciones industriales de alta calidad."> 
+        <meta name="keywords" content="Man-Ser, nosotros, empresa industrial, visión, misión, valores, calidad ISO"> 
+        <meta name="author" content="Man-Ser"> 
+        <title>Nosotros | Man-Ser - Soluciones Industriales</title>         
+        <!-- Favicon -->         
+        <link rel="icon" type="image/png" href="/images/inicio/logo2.png"> 
+        <!-- Google Fonts - Inter -->         
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+        <!-- Estilos -->         
+        <link rel="stylesheet" href="/css/styles.css"> 
+        <link rel="stylesheet" href="/css/components.css"> 
+        <link rel="stylesheet" href="/css/animations.css"> 
+        <link rel="stylesheet" href="/css/responsive.css"> 
+        <style>/* ========== ESTILOS PÁGINA NOSOTROS ========== *//* Header con blur */.header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); } .header.scrolled { background: rgba(255, 255, 255, 0.98); } .header-cert { display: none; margin-left: auto; } .cert-badge { height: 60px; width: auto; } .logo img { height: 65px; } @media (min-width: 1024px) { .header-cert {  display: block; } } /* Section Tag */.section-tag { display: inline-block; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); color: var(--color-white); padding: 0.5rem 1.25rem; border-radius: var(--border-radius-full); font-size: var(--font-size-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; } /* ========== PAGE HERO ========== */.page-hero { position: relative; height: 60vh; min-height: 450px; display: flex; align-items: center; justify-content: center; overflow: hidden; } .page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; } .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgb(28 28 28 / 92%) 0%, rgb(23 23 23 / 70%) 100%); } .page-hero-content { position: relative; z-index: 1; text-align: center; padding: 2rem; max-width: 800px; } .page-hero-title { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; color: var(--color-white); margin-bottom: 1.5rem; } .page-hero-subtitle { font-size: var(--font-size-xl); color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto; line-height: 1.7; } .glow-text { animation: pulseGlow 3s ease-in-out infinite; } @keyframes pulseGlow { 0%, 100% {  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2); }  50% {  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2); } } .text-orange { color: var(--color-secondary); } /* ========== BOTONES CON HOVER ELEGANTE ========== */.btn { position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); } .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s ease; } .btn:hover::before { left: 100%; } .btn-primary:hover { background-color: var(--color-primary-dark); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(26, 77, 140, 0.3); } /* ========== ANIMACIONES DE SCROLL BIDIRECCIONALES ========== */.animate { opacity: 0; transform: translateY(40px); transition: opacity 0.6s ease, transform 0.6s ease; } .animate.from-left { transform: translateX(-40px); } .animate.from-right { transform: translateX(40px); } .animate.from-scale { transform: scale(0.95); } .animate.visible { opacity: 1; transform: translateY(0) translateX(0) scale(1); } /* Delays escalonados */.delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; } .delay-4 { transition-delay: 0.4s; } .delay-5 { transition-delay: 0.5s; } /* ========== ABOUT INTRO ========== */.about-intro { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 900px; margin: 0 auto; } .about-intro-content h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.5rem; color: var(--color-gray-900); } .about-intro-content p { font-size: var(--font-size-lg); color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1.25rem; } .about-list { margin: 1.5rem 0; text-align: left; display: inline-block; } .about-list li { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.75rem; font-size: var(--font-size-base); color: var(--color-gray-700); } .about-list li svg { flex-shrink: 0; color: var(--color-secondary); margin-top: 3px; } /* ========== SLIDESHOW GALERIA ========== */.slideshow-section { background: #a8a8a8; padding: 4rem 0; overflow: hidden; } .slideshow-container { position: relative; max-width: 1200px; margin: 0 auto; } .slideshow-wrapper { position: relative; overflow: hidden; border-radius: var(--border-radius-lg); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); } .slideshow-track { display: flex; transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); } .slide { min-width: 100%; position: relative; } .slide img { width: 100%; height: 550px; object-fit: cover; display: block; } @media (max-width: 768px) { .slide img {  height: 350px; } } .slide-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%); text-align: center; } .slide-title { font-size: var(--font-size-lg); font-weight: 700; color: var(--color-white); margin-bottom: 0.5rem; } .slide-text { font-size: var(--font-size-sm); color: rgba(255, 255, 255, 0.85); max-width: 600px; margin: 0 auto; } /* Slideshow Controls */.slideshow-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: var(--border-radius-full); color: var(--color-white); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; z-index: 10; } .slideshow-btn:hover { background: var(--color-secondary); border-color: var(--color-secondary); transform: translateY(-50%) scale(1.1); } .slideshow-btn.prev { left: 1rem; } .slideshow-btn.next { right: 1rem; } /* Slideshow Dots */.slideshow-dots { display: flex; justify-content: center; gap: 0.75rem; margin-top: 1.5rem; } .dot { width: 12px; height: 12px; border-radius: var(--border-radius-full); background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: all 0.3s ease; } .dot:hover { background: rgba(255, 255, 255, 0.6); } .dot.active { background: var(--color-secondary); width: 32px; } /* ========== FLIP CARDS VISION/MISION ========== */.flip-cards-grid { display: grid; gap: 2rem; } @media (min-width: 768px) { .flip-cards-grid {  grid-template-columns: repeat(2, 1fr); } } .flip-card { perspective: 1000px; height: 380px; cursor: pointer; } .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform-style: preserve-3d; } .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); } .flip-card-front, 
+        .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: var(--border-radius-lg); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2.5rem; text-align: center; } .flip-card-front { background: linear-gradient(135deg, var(--color-white) 0%, #f8f9fa 100%); box-shadow: var(--shadow-lg); } .flip-card.vision .flip-card-front { border-bottom: 4px solid var(--color-primary); } .flip-card.mision .flip-card-front { border-bottom: 4px solid var(--color-secondary); } .flip-card-back { transform: rotateY(180deg); color: var(--color-white); } .flip-card.vision .flip-card-back { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); } .flip-card.mision .flip-card-back { background: linear-gradient(135deg, var(--color-secondary) 0%, #d96800 100%); } .flip-icon { width: 80px; height: 80px; border-radius: var(--border-radius-full); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; } .flip-card.vision .flip-icon { background: rgba(26, 77, 140, 0.1); color: var(--color-primary); } .flip-card.mision .flip-icon { background: rgba(247, 127, 0, 0.1); color: var(--color-secondary); } .flip-card-front h3 { font-size: var(--font-size-2xl); font-weight: 700; color: var(--color-gray-900); margin-bottom: 1rem; } .flip-card-front .flip-hint { font-size: var(--font-size-sm); color: var(--color-gray-500); display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; } .flip-card-back h3 { font-size: var(--font-size-xl); font-weight: 700; margin-bottom: 1.25rem; } .flip-card-back p { font-size: var(--font-size-base); line-height: 1.7; opacity: 0.95; } /* ========== POLITICA DE CALIDAD ========== */.quality-section { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: var(--color-white); } .quality-content { max-width: 900px; margin: 0 auto; } .quality-content h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1.5rem; text-align: center; } .quality-content > p { font-size: var(--font-size-lg); color: rgba(255, 255, 255, 0.9); line-height: 1.8; margin-bottom: 2rem; text-align: center; } .quality-list { list-style: none; display: grid; gap: 1rem; } @media (min-width: 768px) { .quality-list {  grid-template-columns: repeat(2, 1fr); } } .quality-list li { display: flex; align-items: center; justify-content: center; text-align: center; gap: 1rem; font-size: var(--font-size-base); color: rgba(255, 255, 255, 0.95); line-height: 1.6; background: rgba(255, 255, 255, 0.1); padding: 1.25rem; border-radius: var(--border-radius-md); transition: all 0.3s ease; } .quality-list li:hover { background: rgba(255, 255, 255, 0.15); transform: translateY(-3px); } .quality-list li svg { flex-shrink: 0; color: var(--color-secondary); margin-top: 3px; } /* ========== VALORES ========== */.values-grid { display: grid; gap: 1.5rem; } @media (min-width: 768px) { .values-grid {  grid-template-columns: repeat(3, 1fr); } } @media (min-width: 1024px) { .values-grid {  grid-template-columns: repeat(5, 1fr); } } .value-card { background: var(--color-white); border-radius: var(--border-radius-lg); padding: 2rem 1.5rem; text-align: center; box-shadow: var(--shadow-md); transition: all 0.4s ease; } .value-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); } .value-icon { width: 70px; height: 70px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); border-radius: var(--border-radius-full); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; color: var(--color-white); transition: transform 0.4s ease; } .value-card:hover .value-icon { transform: scale(1.1); } .value-card h4 { font-size: var(--font-size-base); font-weight: 700; color: var(--color-gray-900); } /* ========== FOOTER ========== */.footer { background: #0d1b2a; color: var(--color-gray-400); padding-top: 4rem; } .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 2.5rem; margin-bottom: 3rem; } .footer-brand { flex: 1 1 300px; max-width: 450px; } .footer-brand p { margin-top: 1rem; line-height: 1.7; } .footer-contact { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-end; text-align: right; } .footer-title { color: var(--color-white); font-size: var(--font-size-lg); font-weight: 600; margin-bottom: 1.25rem; } .footer-links { list-style: none; } .footer-links li { margin-bottom: 0.75rem; } .footer-links a { color: var(--color-gray-400); transition: all 0.3s ease; } .footer-links a:hover { color: var(--color-white); padding-left: 5px; } .footer-cert-img { height: 60px; width: auto; margin-top: 1rem; } .footer-bottom { padding: 1.5rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 0.75rem; font-size: var(--font-size-sm); } @media (min-width: 768px) { .footer-bottom {  flex-direction: row; } } .developer-credit { color: var(--color-gray-500); font-size: var(--font-size-xs); } .developer-credit a { color: var(--color-secondary); text-decoration: none; transition: color 0.3s ease; } .developer-credit a:hover { color: var(--color-white); } .social-links { display: flex; gap: 0.75rem; margin-top: 1.5rem; } .social-link { width: 42px; height: 42px; background: rgba(255, 255, 255, 0.05); border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center; color: var(--color-gray-400); transition: all 0.3s ease; } .social-link:hover { background: var(--color-secondary); color: var(--color-white); transform: translateY(-3px); } @media (max-width: 767px) { .footer-grid { flex-direction: row; gap: 1.5rem; } .footer-brand { flex: 1 1 45%; min-width: 140px; } .footer-contact { flex: 1 1 45%; min-width: 140px; align-items: flex-start; text-align: left; } .footer-cert-img { height: 50px; } } /* ========== SCROLL TO TOP ========== */.scroll-top { position: fixed; bottom: 2rem; right: 2rem; width: 48px; height: 48px; background: var(--color-primary); color: var(--color-white); border-radius: var(--border-radius-full); display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.3s ease; z-index: 99; box-shadow: var(--shadow-lg); } .scroll-top.visible { opacity: 1; visibility: visible; transform: translateY(0); } .scroll-top:hover { background: var(--color-secondary); transform: translateY(-3px); }
+
+/* ========== ACCORDION STYLES ========== */
+.accordion-list { display: flex; flex-direction: column; gap: 0.75rem; margin: 1.5rem 0; text-align: left; }
+.accordion-item { background: var(--color-white); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); overflow: hidden; transition: box-shadow 0.3s ease; }
+.accordion-item:hover { box-shadow: var(--shadow-md); }
+.accordion-header { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; cursor: pointer; font-size: var(--font-size-base); color: var(--color-gray-700); transition: background 0.3s ease; }
+.accordion-header:hover { background: rgba(26, 77, 140, 0.05); }
+.accordion-header svg:first-child { flex-shrink: 0; color: var(--color-secondary); }
+.accordion-header span { flex: 1; }
+.accordion-icon { flex-shrink: 0; color: var(--color-gray-400); transition: transform 0.3s ease; }
+.accordion-item.active .accordion-icon { transform: rotate(180deg); color: var(--color-primary); }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+.accordion-content p { padding: 0 1.25rem 1rem 3rem; font-size: var(--font-size-sm); color: var(--color-gray-600); line-height: 1.7; }
+.accordion-item.active .accordion-content { max-height: 200px; }
+
+/* ========== VALUE CARDS EXPANDABLE ========== */
+.value-description { max-height: 0; overflow: hidden; transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease; opacity: 0; }
+.value-description p { font-size: var(--font-size-base); color: var(--color-gray-600); line-height: 1.7; margin-top: 1rem; }
+.value-card.active .value-description { max-height: 200px; opacity: 1; }
+.value-card { cursor: pointer; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+
+/* Desktop: accordion behavior */
+@media (min-width: 768px) {
+    .value-card::after { content: 'Click para más info'; display: block; font-size: 11px; color: var(--color-gray-400); margin-top: 0.5rem; opacity: 0; transition: opacity 0.3s ease; }
+    .value-card:hover::after { opacity: 1; }
+    .value-card.active::after { content: 'Click para cerrar'; }
+}
+
+/* ========== MODAL STYLES (Mobile) ========== */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px); z-index: 1000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; padding: 1rem; }
+.modal-overlay.active { opacity: 1; visibility: visible; }
+.modal-content { background: var(--color-white); border-radius: var(--border-radius-lg); padding: 2rem; max-width: 400px; width: 100%; position: relative; transform: scale(0.9) translateY(20px); transition: transform 0.3s ease; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25); }
+.modal-overlay.active .modal-content { transform: scale(1) translateY(0); }
+.modal-close { position: absolute; top: 1rem; right: 1rem; width: 32px; height: 32px; border: none; background: var(--color-gray-100); border-radius: var(--border-radius-full); cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--color-gray-600); transition: all 0.3s ease; }
+.modal-close:hover { background: var(--color-gray-200); color: var(--color-gray-900); }
+.modal-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); border-radius: var(--border-radius-full); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--color-white); }
+.modal-title { font-size: var(--font-size-xl); font-weight: 700; color: var(--color-gray-900); text-align: center; margin-bottom: 1rem; }
+.modal-text { font-size: var(--font-size-base); color: var(--color-gray-600); line-height: 1.7; text-align: center; }
+
+@media (min-width: 768px) {
+    .modal-overlay { display: none !important; }
+}</style>         
+    </head>     
+    <body> 
+        <!-- ========== HEADER ========== -->         
+        <header class="header"> 
+            <div class="header-container"> 
+                <a href="/" class="logo">  <img src="/images/inicio/logo.png" alt="Man-Ser Logo">  </a> 
+                <nav class="nav"> 
+                    <ul class="nav-list"> 
+                        <li>
+                            <a href="/" class="nav-link">Inicio</a>
+                        </li>                         
+                        <li>
+                            <a href="/nosotros" class="nav-link active">Nosotros</a>
+                        </li>                         
+                        <li>
+                            <a href="/productos" class="nav-link">Productos</a>
+                        </li>                         
+                        <li>
+                            <a href="/servicios" class="nav-link">Servicios</a>
+                        </li>                         
+                        <li>
+                            <a href="/contacto" class="nav-link">Contacto</a>
+                        </li>                         
+                    </ul>                     
+                </nav>                 
+                <div class="header-cert"> 
+                    <img src="/images/inicio/certificacion.png" alt="Certificación ISO" class="cert-badge"> 
+                </div>                 
+                <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"> 
+                    <span></span> 
+                    <span></span> 
+                    <span></span> 
+                </button>                 
+            </div>             
+        </header>         
+        <!-- Mobile Navigation Overlay -->         
+        <nav class="mobile-nav" id="mobileNav"> 
+            <button class="mobile-nav-close" aria-label="Cerrar menú"> 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"> 
+                    <line x1="18" y1="6" x2="6" y2="18"></line>                     
+                    <line x1="6" y1="6" x2="18" y2="18"></line>                     
+                </svg>                 
+            </button>             
+            <ul class="mobile-nav-list"> 
+                <li>
+                    <a href="/" class="mobile-nav-link">Inicio</a>
+                </li>                 
+                <li>
+                    <a href="/nosotros" class="mobile-nav-link active">Nosotros</a>
+                </li>                 
+                <li>
+                    <a href="/productos" class="mobile-nav-link">Productos</a>
+                </li>                 
+                <li>
+                    <a href="/servicios" class="mobile-nav-link">Servicios</a>
+                </li>                 
+                <li>
+                    <a href="/contacto" class="mobile-nav-link">Contacto</a>
+                </li>                 
+            </ul>             
+        </nav>         
+        <!-- ========== PAGE HERO ========== -->         
+        <section class="page-hero parallax-container"> 
+            <div class="page-hero-bg parallax-bg" style="background-image: url('/images/nosotros/nosotros_header.png'); background-size: cover; background-position: center;"></div>             
+            <div class="page-hero-overlay gradient-animated" style="background: linear-gradient(135deg, rgba(20, 20, 20, 0.92) 0%, rgba(30, 30, 30, 0.75) 50%, rgba(255, 255, 255, 0.12) 100%); background-size: 200% 200%;"></div>             
+            <div class="page-hero-content"> 
+                <h1 class="page-hero-title anim-ready fade-up"><span class="glow-text text-reveal">Conózcanos</span></h1> 
+                <p class="page-hero-subtitle anim-ready fade-up anim-delay-2">Una empresa comprometida con la <span class="text-orange">calidad</span> y la <span class="text-orange">innovación</span> industrial</p> 
+            </div>             
+        </section>         
+        <!-- ========== ABOUT INTRO ========== -->         
+        <section class="section section-lg"> 
+            <div class="container"> 
+                <div class="about-intro"> 
+                    <div class="about-intro-content anim-ready fade-up"> 
+                        <span class="section-tag">La Empresa</span> 
+                        <h2>Especialistas en Soluciones Industriales</h2> 
+                        <p> 
+                        Somos una empresa que, desde su creación, se ha especializado en el manejo controlado de la viruta dentro de la industria, ofreciendo una amplia gama de productos específicos para el cuidado de equipos y recursos, resguardando siempre la calidad de las piezas en producción.
+ </p> 
+                        <p>Enfocados en estos objetivos, desarrollamos:</p> 
+                        <div class="accordion-list stagger-group"> 
+                            <div class="accordion-item anim-ready fade-left" data-title="Protectores de bancada" data-description="Protectores telescópicos para máquinas de mecanizado que garantizan el cuidado de los mecanismos de accionamiento y de las bancadas, prolongando la vida útil de sus equipos.">
+                                <div class="accordion-header">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                        <polyline points="20 6 9 17 4 12"></polyline>                                     
+                                    </svg>
+                                    <span>Protectores de bancada</span>
+                                    <svg class="accordion-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Protectores telescópicos para máquinas de mecanizado que garantizan el cuidado de los mecanismos de accionamiento y de las bancadas, prolongando la vida útil de sus equipos.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item anim-ready fade-left" data-title="Lavadoras especiales de piezas" data-description="Lavadoras especiales de piezas que garantizan la calidad y estabilidad del proceso siguiente en líneas continuas de producción, con sistema de lavado autónomo o centralizado.">
+                                <div class="accordion-header">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                        <polyline points="20 6 9 17 4 12"></polyline>                                     
+                                    </svg>
+                                    <span>Lavadoras especiales de piezas</span>
+                                    <svg class="accordion-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Lavadoras especiales de piezas que garantizan la calidad y estabilidad del proceso siguiente en líneas continuas de producción, con sistema de lavado autónomo o centralizado.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item anim-ready fade-left" data-title="Extractores de viruta" data-description="Extractores de viruta, centrales de filtrado, carenado o carrocerías de máquinas. Soluciones integrales para el manejo eficiente de residuos en procesos industriales.">
+                                <div class="accordion-header">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                        <polyline points="20 6 9 17 4 12"></polyline>                                     
+                                    </svg>
+                                    <span>Extractores de viruta y centrales de filtrado</span>
+                                    <svg class="accordion-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Extractores de viruta, centrales de filtrado, carenado o carrocerías de máquinas. Soluciones integrales para el manejo eficiente de residuos en procesos industriales.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item anim-ready fade-left" data-title="Equipos de transporte y sistemas de lavado" data-description="Equipos de transporte y sistemas de lavado para diversas industrias: metalúrgica, frutihortícola, alimenticia y más. Diseñados para optimizar sus procesos productivos.">
+                                <div class="accordion-header">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                        <polyline points="20 6 9 17 4 12"></polyline>                                     
+                                    </svg>
+                                    <span>Equipos de transporte y sistemas de lavado</span>
+                                    <svg class="accordion-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Equipos de transporte y sistemas de lavado para diversas industrias: metalúrgica, frutihortícola, alimenticia y más. Diseñados para optimizar sus procesos productivos.</p>
+                                </div>
+                            </div>
+                        </div>                         
+                        <p class="anim-ready fade-up" style="margin-top: 1.5rem;"> 
+                        Por otro lado, nuestro equipamiento y organización por procesos nos permiten ofrecer además un amplio espectro de servicios que hacen posible el desarrollo -en conjunto con nuestros clientes- de proyectos integrales o como así también el abastecimiento de producción en serie para empresas del sector industrial.
+ </p> 
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <!-- ========== SLIDESHOW GALERIA ========== -->         
+        <section class="slideshow-section"> 
+            <div class="container"> 
+                <div class="slideshow-container anim-ready blur-in"> 
+                    <div class="slideshow-wrapper"> 
+                        <div class="slideshow-track"> 
+                            <div class="slide"> 
+                                <img src="/images/nosotros/nosotros1.png" alt="Instalaciones Man-Ser"> 
+                                <div class="slide-content"> 
+                                    <h3 class="slide-title">Nuestras Instalaciones</h3> 
+                                    <p class="slide-text">Infraestructura moderna para la fabricación de equipos industriales de alta calidad</p> 
+                                </div>                                 
+                            </div>                             
+                            <div class="slide"> 
+                                <img src="/images/nosotros/nosotros2.png" alt="Maquinaria Man-Ser"> 
+                                <div class="slide-content"> 
+                                    <h3 class="slide-title">Tecnología Avanzada</h3> 
+                                    <p class="slide-text">Equipamiento de última generación para procesos de fabricación precisos</p> 
+                                </div>                                 
+                            </div>                             
+                            <div class="slide"> 
+                                <img src="/images/nosotros/nosotros3.png" alt="Equipo de trabajo"> 
+                                <div class="slide-content"> 
+                                    <h3 class="slide-title">Equipo Profesional</h3> 
+                                    <p class="slide-text">Personal capacitado y comprometido con la excelencia</p> 
+                                </div>                                 
+                            </div>                             
+                            <div class="slide"> 
+                                <img src="/images/nosotros/nosotros5.png" alt="Producción"> 
+                                <div class="slide-content"> 
+                                    <h3 class="slide-title">Producción en Serie</h3> 
+                                    <p class="slide-text">Capacidad para proyectos integrales y producción en serie para la industria</p> 
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <button class="slideshow-btn prev icon-hover-bounce" aria-label="Anterior"> 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                            <polyline points="15 18 9 12 15 6"></polyline>                             
+                        </svg>                         
+                    </button>                     
+                    <button class="slideshow-btn next icon-hover-bounce" aria-label="Siguiente"> 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                            <polyline points="9 18 15 12 9 6"></polyline>                             
+                        </svg>                         
+                    </button>                     
+                    <div class="slideshow-dots"> 
+                        <span class="dot active" data-slide="0"></span> 
+                        <span class="dot" data-slide="1"></span> 
+                        <span class="dot" data-slide="2"></span> 
+                        <span class="dot" data-slide="3"></span> 
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <!-- ========== VISION Y MISION - FLIP CARDS ========== -->         
+        <section class="section section-lg bg-light"> 
+            <div class="container"> 
+                <div class="section-header text-center anim-ready fade-up"> 
+                    <span class="section-tag">Nuestro Propósito</span> 
+                    <h2 class="section-title">Visión y Misión</h2> 
+                    <p class="section-subtitle">Los pilares que guían nuestro trabajo diario</p> 
+                </div>                 
+                <div class="flip-cards-grid stagger-group"> 
+                    <div class="flip-card vision anim-ready fade-left"> 
+                        <div class="flip-card-inner"> 
+                            <div class="flip-card-front"> 
+                                <div class="flip-icon icon-hover-rotate"> 
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                        <circle cx="12" cy="12" r="10"></circle>                                         
+                                        <circle cx="12" cy="12" r="6"></circle>                                         
+                                        <circle cx="12" cy="12" r="2"></circle>                                         
+                                    </svg>                                     
+                                </div>                                 
+                                <h3>Nuestra Visión</h3> 
+                                <span class="flip-hint">  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                        <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"></path>                                         
+                                    </svg> 
+                                Click para ver más
+ </span> 
+                            </div>                             
+                            <div class="flip-card-back"> 
+                                <h3>Nuestra Visión</h3> 
+                                <p> 
+                                Ser una empresa reconocida a nivel nacional y en Latinoamérica por la confiabilidad de nuestros productos y la calidad de nuestros servicios.
+ </p> 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="flip-card mision anim-ready fade-right"> 
+                        <div class="flip-card-inner"> 
+                            <div class="flip-card-front"> 
+                                <div class="flip-icon icon-hover-rotate"> 
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>                                         
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>                                         
+                                    </svg>                                     
+                                </div>                                 
+                                <h3>Nuestra Misión</h3> 
+                                <span class="flip-hint">  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                        <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"></path>                                         
+                                    </svg> 
+                                Click para ver más
+ </span> 
+                            </div>                             
+                            <div class="flip-card-back"> 
+                                <h3>Nuestra Misión</h3> 
+                                <p> 
+                                Ofrecer a nuestros clientes soluciones industriales inteligentes que satisfagan sus expectativas, dando prioridad a resguardar una excelente relación con los mismos. Mantener un espíritu innovador y creativo, en un ambiente de trabajo agradable con responsabilidad conjunta.
+ </p> 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <!-- ========== POLITICA DE CALIDAD ========== -->         
+        <section class="section section-lg quality-section"> 
+            <div class="container"> 
+                <div class="quality-content anim-ready fade-up" style="text-align: center;"> 
+                    <span class="section-tag float-animation" style="background: rgba(255,255,255,0.2); display: inline-block;">ISO 9001:2008</span> 
+                    <h2 style="text-align: center;">Política de Calidad</h2> 
+                    <p> 
+                    Con el compromiso de cumplir con los requisitos de la norma ISO 9001:2008, nuestra empresa establece:
+ </p> 
+                    <ul class="quality-list stagger-group"> 
+                        <li class="anim-ready fade-left"> 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                <polyline points="20 6 9 17 4 12"></polyline>                                 
+                            </svg>                             
+                            Dirigir la empresa con una política de crecimiento sostenido, basado en el análisis objetivo de información.
+                        </li>                         
+                        <li class="anim-ready fade-left"> 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                <polyline points="20 6 9 17 4 12"></polyline>                                 
+                            </svg>                             
+                            Lograr la plena satisfacción de nuestros clientes en calidad, innovación y celeridad de respuesta.
+                        </li>                         
+                        <li class="anim-ready fade-left"> 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                <polyline points="20 6 9 17 4 12"></polyline>                                 
+                            </svg>                             
+                            Desarrollar relaciones con proveedores basadas en la confianza y mutua asistencia.
+                        </li>                         
+                        <li class="anim-ready fade-left"> 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                <polyline points="20 6 9 17 4 12"></polyline>                                 
+                            </svg>                             
+                            Crear y preservar un clima laboral ameno que propicie el trabajo en equipo.
+                        </li>                         
+                        <li class="anim-ready fade-left"> 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                <polyline points="20 6 9 17 4 12"></polyline>                                 
+                            </svg>                             
+                            Optimizar rentabilidad mediante uso eficiente de recursos y gestión fluida de producción.
+                        </li>                         
+                    </ul>                     
+                </div>                 
+            </div>             
+        </section>         
+        <!-- ========== VALORES ========== -->         
+        <section class="section section-lg"> 
+            <div class="container"> 
+                <div class="section-header text-center anim-ready fade-up"> 
+                    <span class="section-tag">Nuestros Principios</span> 
+                    <h2 class="section-title">Valores</h2> 
+                    <p class="section-subtitle">Los principios que dirigen la manera de hacer y decidir de toda nuestra gente</p> 
+                </div>                 
+                <div class="values-grid stagger-group"> 
+                    <div class="value-card anim-ready scale-in card-hover-lift" data-title="Confianza" data-description="Generamos relaciones basadas en la confianza mutua con nuestros clientes, proveedores y equipo de trabajo. Cumplimos nuestros compromisos con responsabilidad.">
+                        <div class="value-icon icon-hover-bounce"> 
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>                                 
+                                <polyline points="9 12 11 14 15 10"></polyline>                                 
+                            </svg>                             
+                        </div>                         
+                        <h4>Confianza</h4>
+                        <div class="value-description">
+                            <p>Generamos relaciones basadas en la confianza mutua con nuestros clientes, proveedores y equipo de trabajo.</p>
+                        </div>
+                    </div>                     
+                    <div class="value-card anim-ready scale-in card-hover-lift" data-title="Honestidad" data-description="Actuamos con transparencia y ética en todas nuestras operaciones. La honestidad es la base de nuestra reputación empresarial.">
+                        <div class="value-icon icon-hover-bounce"> 
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>                                 
+                            </svg>                             
+                        </div>                         
+                        <h4>Honestidad</h4>
+                        <div class="value-description">
+                            <p>Actuamos con transparencia y ética en todas nuestras operaciones.</p>
+                        </div>
+                    </div>                     
+                    <div class="value-card anim-ready scale-in card-hover-lift" data-title="Importancia en los Detalles" data-description="Prestamos atención a cada detalle en nuestros procesos de fabricación y servicio. La excelencia está en los pequeños detalles.">
+                        <div class="value-icon icon-hover-bounce"> 
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                <circle cx="11" cy="11" r="8"></circle>                                 
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>                                 
+                                <line x1="11" y1="8" x2="11" y2="14"></line>                                 
+                                <line x1="8" y1="11" x2="14" y2="11"></line>                                 
+                            </svg>                             
+                        </div>                         
+                        <h4>Importancia en los Detalles</h4>
+                        <div class="value-description">
+                            <p>Prestamos atención a cada detalle en nuestros procesos de fabricación y servicio.</p>
+                        </div>
+                    </div>                     
+                    <div class="value-card anim-ready scale-in card-hover-lift" data-title="Trabajo en Equipo" data-description="Fomentamos la colaboración y el trabajo en equipo. Juntos logramos resultados excepcionales para nuestros clientes.">
+                        <div class="value-icon icon-hover-bounce"> 
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>                                 
+                                <circle cx="9" cy="7" r="4"></circle>                                 
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>                                 
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>                                 
+                            </svg>                             
+                        </div>                         
+                        <h4>Trabajo en Equipo</h4>
+                        <div class="value-description">
+                            <p>Fomentamos la colaboración y el trabajo en equipo. Juntos logramos resultados excepcionales.</p>
+                        </div>
+                    </div>                     
+                    <div class="value-card anim-ready scale-in card-hover-lift" data-title="Alta Responsabilidad" data-description="Asumimos responsabilidad por nuestro trabajo y sus resultados. Cada proyecto es tratado con el máximo compromiso y profesionalismo.">
+                        <div class="value-icon icon-hover-bounce"> 
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>                                 
+                            </svg>                             
+                        </div>                         
+                        <h4>Alta Responsabilidad</h4>
+                        <div class="value-description">
+                            <p>Asumimos responsabilidad por nuestro trabajo y sus resultados. Cada proyecto es tratado con el máximo compromiso.</p>
+                        </div>
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>
+        
+        <!-- ========== MODAL (Mobile) ========== -->
+        <div class="modal-overlay" id="valueModal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Cerrar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="modal-icon" id="modalIcon"></div>
+                <h3 class="modal-title" id="modalTitle"></h3>
+                <p class="modal-text" id="modalText"></p>
+            </div>
+        </div>
+        
+        <!-- ========== FOOTER ========== -->         
+        <footer class="footer"> 
+            <div class="container"> 
+                <div class="footer-grid anim-ready fade-up"> 
+                    <div class="footer-brand"> 
+                        <img src="/images/inicio/logo.png" alt="Man-Ser" style="height: 45px; filter: brightness(0) invert(1);"> 
+                        <p>Empresa especializada en el manejo controlado de la viruta dentro de la industria, ofreciendo soluciones de alta calidad.</p> 
+                        <div class="social-links"> 
+                            <a href="https://www.instagram.com/manser.arg/" target="_blank" rel="noopener noreferrer" class="social-link icon-hover-rotate" aria-label="Instagram">  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>                                     
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>                                     
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>                                     
+                                </svg>  </a> 
+                        </div>                         
+                    </div>                     
+                    <div class="footer-contact"> 
+                        <h4 class="footer-title">Contacto</h4> 
+                        <ul class="footer-links"> 
+                            <li>Argentina</li>                             
+                            <li>
+                                <a href="mailto:info@man-ser.com.ar" class="link-underline">info@man-ser.com.ar</a>
+                            </li>                             
+                        </ul>                         
+                        <img src="/images/inicio/certificacion.png" alt="Certificación ISO" class="footer-cert-img"> 
+                    </div>                     
+                </div>                 
+                <div class="footer-bottom"> 
+                    <p>&copy; 2026 Man-Ser. Todos los derechos reservados.</p> 
+                    <p class="developer-credit">Desarrollado por <a href="https://portfolio-eduardomendoza.up.railway.app/index.html" target="_blank" rel="noopener noreferrer">Eduardo Mendoza</a></p> 
+                </div>                 
+            </div>             
+        </footer>         
+        <!-- Scroll to Top -->         
+        <button class="scroll-top" aria-label="Volver arriba"> 
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+                <polyline points="18 15 12 9 6 15"></polyline>                 
+            </svg>             
+        </button>         
+        <!-- JavaScript -->         
+        <script src="/js/main.js"></script>         
+        <script src="/js/animations.js"></script>         
+        <script>
+        // ========== FLIP CARDS CLICK TOGGLE ==========
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('flipped');
+            });
+            card.style.cursor = 'pointer';
+        });
+        
+        // ========== SLIDESHOW PREMIUM ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.slideshow-track');
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.slideshow-btn.prev');
+            const nextBtn = document.querySelector('.slideshow-btn.next');
+            let currentSlide = 0;
+            let autoSlideInterval;
+            let isTransitioning = false;
+            
+            // Premium transition timing
+            const transitionDuration = 500; // ms
+            const easing = 'cubic-bezier(0.23, 1, 0.32, 1)';
+            
+            // Set initial transition
+            if (track) {
+                track.style.transition = `transform ${transitionDuration}ms ${easing}`;
+            }
+            
+            function goToSlide(index) {
+                if (isTransitioning) return;
+                if (index < 0) index = slides.length - 1;
+                if (index >= slides.length) index = 0;
+                if (index === currentSlide) return;
+                
+                isTransitioning = true;
+                
+                // Apply subtle blur during transition
+                slides.forEach(slide => {
+                    slide.style.transition = `filter ${transitionDuration * 0.4}ms ${easing}`;
+                    slide.style.filter = 'blur(3px)';
+                });
+                
+                currentSlide = index;
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentSlide);
+                });
+                
+                // Remove blur after transition midpoint
+                setTimeout(() => {
+                    slides.forEach(slide => {
+                        slide.style.filter = 'blur(0px)';
+                    });
+                }, transitionDuration * 0.5);
+                
+                // Reset transitioning flag
+                setTimeout(() => {
+                    isTransitioning = false;
+                    slides.forEach(slide => {
+                        slide.style.filter = '';
+                        slide.style.transition = '';
+                    });
+                }, transitionDuration);
+            }
+            
+            function nextSlide() {
+                const next = currentSlide + 1 >= slides.length ? 0 : currentSlide + 1;
+                goToSlide(next);
+            }
+            
+            function prevSlide() {
+                const prev = currentSlide - 1 < 0 ? slides.length - 1 : currentSlide - 1;
+                goToSlide(prev);
+            }
+            
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            }
+            
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+            
+            // Event listeners
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    stopAutoSlide();
+                    startAutoSlide();
+                });
+            }
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    stopAutoSlide();
+                    startAutoSlide();
+                });
+            }
+            
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(i);
+                    stopAutoSlide();
+                    startAutoSlide();
+                });
+            });
+            
+            // Start auto slide
+            startAutoSlide();
+            
+            // ========== SCROLL TO TOP ==========
+            const scrollTop = document.querySelector('.scroll-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 400) {
+                    scrollTop.classList.add('visible');
+                } else {
+                    scrollTop.classList.remove('visible');
+                }
+            });
+            
+            scrollTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // ========== ACCORDION FUNCTIONALITY ==========
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const item = header.parentElement;
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all accordions
+                    document.querySelectorAll('.accordion-item').forEach(acc => {
+                        acc.classList.remove('active');
+                    });
+                    
+                    // Open clicked if wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+            
+            // ========== VALUE CARDS - ACCORDION (Desktop) / MODAL (Mobile) ==========
+            const valueCards = document.querySelectorAll('.value-card[data-title]');
+            const modal = document.getElementById('valueModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalText = document.getElementById('modalText');
+            const modalIcon = document.getElementById('modalIcon');
+            const modalClose = document.querySelector('.modal-close');
+            
+            function isMobile() {
+                return window.innerWidth < 768;
+            }
+            
+            valueCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const title = card.getAttribute('data-title');
+                    const description = card.getAttribute('data-description');
+                    const iconSVG = card.querySelector('.value-icon svg');
+                    
+                    if (isMobile()) {
+                        // Mobile: Open modal
+                        modalTitle.textContent = title;
+                        modalText.textContent = description;
+                        if (iconSVG) {
+                            modalIcon.innerHTML = iconSVG.outerHTML;
+                        }
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        // Desktop: Toggle accordion
+                        const isActive = card.classList.contains('active');
+                        valueCards.forEach(c => c.classList.remove('active'));
+                        if (!isActive) {
+                            card.classList.add('active');
+                        }
+                    }
+                });
+            });
+            
+            // Close modal
+            if (modalClose) {
+                modalClose.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+            
+            // Close modal on overlay click
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+            
+            // Close modal on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>         
+    </body>     
+</html>

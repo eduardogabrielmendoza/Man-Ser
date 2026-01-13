@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Man-Ser - Contacto. Comuníquese con nosotros para cotizaciones y consultas sobre productos y servicios industriales.">
+    <meta name="keywords" content="Man-Ser, contacto, cotización, consultas, Córdoba, Argentina">
+    <meta name="author" content="Man-Ser">
+    
+    <title>Contacto | Man-Ser - Soluciones Industriales</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/inicio/logo2.png">
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    
+    <style>
+        /* ========== ESTILOS PÁGINA CONTACTO ========== */
+        
+        /* Header con blur */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+        }
+        
+        .header-cert {
+            display: none;
+            margin-left: auto;
+        }
+        
+        .cert-badge {
+            height: 60px;
+            width: auto;
+        }
+        
+        .logo img {
+            height: 65px;
+        }
+        
+        @media (min-width: 1024px) {
+            .header-cert {
+                display: block;
+            }
+        }
+        
+        /* Section Tag */
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            color: var(--color-white);
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--border-radius-full);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        /* ========== PAGE HERO ========== */
+        .page-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .page-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .page-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgb(28 28 28 / 92%) 0%, rgb(23 23 23 / 70%) 100%);
+        }
+        
+        .page-hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+        }
+        
+        .page-hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-hero-subtitle {
+            font-size: var(--font-size-xl);
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .glow-text {
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2);
+            }
+        }
+        
+        .text-orange {
+            color: var(--color-secondary);
+        }
+        
+        /* ========== BOTONES CON HOVER ELEGANTE ========== */
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(26, 77, 140, 0.3);
+        }
+        
+        /* ========== ANIMACIONES DE SCROLL BIDIRECCIONALES ========== */
+        .animate {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .animate.from-left {
+            transform: translateX(-40px);
+        }
+        
+        .animate.from-right {
+            transform: translateX(40px);
+        }
+        
+        .animate.from-scale {
+            transform: scale(0.95);
+        }
+        
+        .animate.visible {
+            opacity: 1;
+            transform: translateY(0) translateX(0) scale(1);
+        }
+        
+        /* Delays escalonados */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+        
+        /* ========== CONTACT SECTION ========== */
+        .contact-section {
+            padding: 5rem 0;
+        }
+        
+        .contact-grid {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto !important;
+            width: 100%;
+        }
+        
+        @media (min-width: 1024px) {
+            .contact-grid {
+                flex-direction: row;
+                justify-content: center !important;
+                align-items: stretch;
+            }
+        }
+        
+        /* ========== CONTACT INFO ========== */
+        .contact-info {
+            background: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            max-width: 400px;
+            width: 100%;
+            flex: 1;
+            margin: 0 auto;
+        }
+        
+        .contact-info h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--color-gray-900);
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .contact-info-text {
+            color: var(--color-gray-600);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--color-gray-100);
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-item-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            border-radius: var(--border-radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--color-white);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .contact-item:hover .contact-item-icon {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(26, 77, 140, 0.3);
+        }
+        
+        .contact-item-content h4 {
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            color: var(--color-gray-900);
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-item-content p {
+            font-size: var(--font-size-base);
+            color: var(--color-gray-600);
+        }
+        
+        .contact-item-content a {
+            color: var(--color-primary);
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item-content a:hover {
+            color: var(--color-secondary);
+        }
+        
+        /* ========== CONTACT FORM ========== */
+        .contact-form-wrapper {
+            background: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            max-width: 400px;
+            width: 100%;
+            flex: 1;
+            margin: 0 auto;
+        }
+        
+        .contact-form-wrapper h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--color-gray-900);
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--color-gray-700);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--color-gray-200);
+            border-radius: var(--border-radius-md);
+            font-family: inherit;
+            font-size: var(--font-size-base);
+            color: var(--color-gray-900);
+            background: var(--color-white);
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 4px rgba(26, 77, 140, 0.1);
+        }
+        
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--color-gray-400);
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .form-submit {
+            width: 100%;
+        }
+        
+        /* ========== MAP SECTION ========== */
+        .map-section {
+            background: var(--color-gray-50);
+            padding: 4rem 0;
+        }
+        
+        .map-wrapper {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 400px;
+        }
+        
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .map-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .map-header h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--color-gray-900);
+            margin-bottom: 0.5rem;
+        }
+        
+        .map-header p {
+            color: var(--color-gray-600);
+        }
+        
+        /* ========== QUICK CONTACT CARDS ========== */
+        .quick-contact {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            justify-content: center;
+            justify-items: center;
+            width: 100%;
+        }
+        
+        @media (min-width: 768px) {
+            .quick-contact {
+                grid-template-columns: repeat(3, minmax(200px, 280px));
+                justify-content: center;
+            }
+        }
+        
+        .quick-contact-card {
+            background: var(--color-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .quick-contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-top-color: var(--color-primary);
+        }
+        
+        .quick-contact-card svg {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .quick-contact-card h4 {
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            color: var(--color-gray-900);
+            margin-bottom: 0.5rem;
+        }
+        
+        .quick-contact-card p {
+            font-size: var(--font-size-sm);
+            color: var(--color-gray-600);
+        }
+        
+        .quick-contact-card a {
+            color: var(--color-primary);
+            font-weight: 500;
+        }
+        
+        .quick-contact-card a:hover {
+            color: var(--color-secondary);
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: #0d1b2a;
+            color: var(--color-gray-400);
+            padding-top: 4rem;
+        }
+        
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand {
+            flex: 1 1 300px;
+            max-width: 450px;
+        }
+        
+        .footer-brand p {
+            margin-top: 1rem;
+            line-height: 1.7;
+        }
+        
+        .footer-contact {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+        }
+        
+        .footer-title {
+            color: var(--color-white);
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: var(--color-gray-400);
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-white);
+            padding-left: 5px;
+        }
+        
+        .footer-cert-img {
+            height: 60px;
+            width: auto;
+            margin-top: 1rem;
+        }
+        
+        .footer-bottom {
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            font-size: var(--font-size-sm);
+        }
+        
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+            }
+        }
+        
+        .developer-credit {
+            color: var(--color-gray-500);
+            font-size: var(--font-size-xs);
+        }
+        
+        .developer-credit a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .developer-credit a:hover {
+            color: var(--color-white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-link {
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gray-400);
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--color-secondary);
+            color: var(--color-white);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 767px) {
+            .footer-grid {
+                flex-direction: row;
+                gap: 1.5rem;
+            }
+            .footer-brand {
+                flex: 1 1 45%;
+                min-width: 140px;
+            }
+            .footer-contact {
+                flex: 1 1 45%;
+                min-width: 140px;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .footer-cert-img {
+                height: 50px;
+            }
+        }
+        
+        /* ========== SCROLL TO TOP ========== */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-radius: var(--border-radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 99;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .scroll-top:hover {
+            background: var(--color-secondary);
+            transform: translateY(-3px);
+        }
+        
+        /* ========== SUCCESS MESSAGE ========== */
+        .form-success {
+            display: none;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: var(--border-radius-md);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .form-success.show {
+            display: block;
+            animation: slideDown 0.4s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/images/inicio/logo.png" alt="Man-Ser Logo">
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Inicio</a></li>
+                    <li><a href="/nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="/productos" class="nav-link">Productos</a></li>
+                    <li><a href="/servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="/contacto" class="nav-link active">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-cert">
+                <img src="/images/inicio/certificacion.png" alt="Certificación ISO" class="cert-badge">
+            </div>
+            
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation Overlay -->
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" aria-label="Cerrar menú">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <ul class="mobile-nav-list">
+            <li><a href="/" class="mobile-nav-link">Inicio</a></li>
+            <li><a href="/nosotros" class="mobile-nav-link">Nosotros</a></li>
+            <li><a href="/productos" class="mobile-nav-link">Productos</a></li>
+            <li><a href="/servicios" class="mobile-nav-link">Servicios</a></li>
+            <li><a href="/contacto" class="mobile-nav-link active">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero parallax-container">
+        <div class="page-hero-bg parallax-bg" style="background-image: url('/images/contacto/contacto_header.png');"></div>
+        <div class="page-hero-overlay gradient-animated" style="background: linear-gradient(135deg, rgba(20, 20, 20, 0.92) 0%, rgba(30, 30, 30, 0.75) 50%, rgba(255, 255, 255, 0.12) 100%); background-size: 200% 200%;"></div>
+        
+        <div class="page-hero-content">
+            <h1 class="page-hero-title anim-ready fade-up"><span class="glow-text text-reveal">Contacto</span></h1>
+            <p class="page-hero-subtitle anim-ready fade-up">Estamos a su disposición para <span class="text-orange">consultas</span> y <span class="text-orange">cotizaciones</span></p>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info anim-ready fade-left">
+                    <span class="section-tag">Contacto</span>
+                    <h2>Información de Contacto</h2>
+                    <p class="contact-info-text">
+                        Estamos listos para ayudarle con sus proyectos industriales. Contáctenos para cotizaciones, consultas técnicas o más información sobre nuestros productos y servicios.
+                    </p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Dirección</h4>
+                            <p>2 de Septiembre 4724<br>Barrio San Pedro Nolasco<br>Córdoba, Argentina</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Teléfonos</h4>
+                            <p>
+                                <a href="tel:+5403514932077">0351 4932077</a><br>
+                                <a href="tel:+5403514949079">0351 4949079</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Email</h4>
+                            <p><a href="mailto:man-ser@man-ser.com.ar">man-ser@man-ser.com.ar</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes<br>8:00 a 17:00 hs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper anim-ready fade-right">
+                    <span class="section-tag">Escribanos</span>
+                    <h2>Envíenos su Consulta</h2>
+                    
+                    <div class="form-success" id="formSuccess">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        ¡Mensaje enviado correctamente! Nos pondremos en contacto pronto.
+                    </div>
+                    
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre" class="form-label">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Su nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="empresa" class="form-label">Empresa</label>
+                                <input type="text" id="empresa" name="empresa" class="form-input" placeholder="Nombre de su empresa">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="correo@ejemplo.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="Su teléfono">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="asunto" class="form-label">Asunto *</label>
+                            <input type="text" id="asunto" name="asunto" class="form-input" placeholder="Motivo de su consulta" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje" class="form-label">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" class="form-textarea" placeholder="Escriba su mensaje aquí..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg form-submit">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Quick Contact Cards -->
+            <div class="quick-contact anim-ready fade-up stagger-group">
+                <div class="quick-contact-card card-hover-lift card-tilt">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <h4>Visítenos</h4>
+                    <p>2 de Septiembre 4724<br>Córdoba, Argentina</p>
+                </div>
+                
+                <div class="quick-contact-card card-hover-lift card-tilt">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <h4>Llámenos</h4>
+                    <p><a href="tel:+5403514932077" class="link-underline">0351 4932077</a></p>
+                </div>
+                
+                <div class="quick-contact-card card-hover-lift card-tilt">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <h4>Escríbanos</h4>
+                    <p><a href="mailto:man-ser@man-ser.com.ar" class="link-underline">man-ser@man-ser.com.ar</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MAP SECTION ========== -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-header anim-ready fade-up">
+                <span class="section-tag">Ubicación</span>
+                <h2>Cómo Llegar</h2>
+                <p>Encuéntrenos en Córdoba, Argentina</p>
+            </div>
+            
+            <div class="map-wrapper anim-ready fade-up">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.7694095891674!2d-64.21985892441986!3d-31.369444574234597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a35e00b8d2ab%3A0x8b5c7f9b9e7b7c7c!2s2%20de%20Septiembre%204724%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación Man-Ser">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="/images/inicio/logo.png" alt="Man-Ser" style="height: 45px; filter: brightness(0) invert(1);">
+                    <p>Empresa especializada en el manejo controlado de la viruta dentro de la industria, ofreciendo soluciones de alta calidad.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/manser.arg/" target="_blank" rel="noopener noreferrer" class="social-link icon-hover-rotate" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-links">
+                        <li>Córdoba, Argentina</li>
+                        <li><a href="mailto:man-ser@man-ser.com.ar" class="link-underline">man-ser@man-ser.com.ar</a></li>
+                        <li><a href="tel:+5403514932077" class="link-underline">0351 4932077</a></li>
+                    </ul>
+                    <img src="/images/inicio/certificacion.png" alt="Certificación ISO" class="footer-cert-img">
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Man-Ser. Todos los derechos reservados.</p>
+                <p class="developer-credit">Desarrollado por <a href="https://portfolio-eduardomendoza.up.railway.app/index.html" target="_blank" rel="noopener noreferrer">Eduardo Mendoza</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" aria-label="Volver arriba">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    <script src="/js/animations.js"></script>
+    <script>
+        // ========== CONTACT PAGE SPECIFIC SCRIPTS ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            // ========== FORM SUBMISSION ==========
+            const contactForm = document.getElementById('contactForm');
+            const formSuccess = document.getElementById('formSuccess');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission
+                const submitBtn = contactForm.querySelector('.form-submit');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.innerHTML = `
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;">
+                        <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="32"></circle>
+                    </svg>
+                    Enviando...
+                `;
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    formSuccess.classList.add('show');
+                    contactForm.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        formSuccess.classList.remove('show');
+                    }, 5000);
+                }, 1500);
+            });
+            
+            // ========== SCROLL TO TOP ==========
+            const scrollTop = document.querySelector('.scroll-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 400) {
+                    scrollTop.classList.add('visible');
+                } else {
+                    scrollTop.classList.remove('visible');
+                }
+            });
+            
+            scrollTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // ========== HEADER SCROLL EFFECT ==========
+            const header = document.querySelector('.header');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+    
+    <style>
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</body>
+</html>

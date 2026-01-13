@@ -1,0 +1,24 @@
+{
+  "name": "man-ser-website",
+  "version": "1.0.0",
+  "description": "Sitio web corporativo de Man-Ser - Soluciones industriales",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "man-ser",
+    "industrial",
+    "mecanizado",
+    "argentina"
+  ],
+  "author": "Man-Ser",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
