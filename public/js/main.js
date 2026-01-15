@@ -79,6 +79,7 @@ function initHeaderScroll() {
     
     if (header) {
         let lastScroll = 0;
+        const threshold = 100; // Umbral para considerar "cerca del inicio"
         
         window.addEventListener('scroll', function() {
             const currentScroll = window.pageYOffset;
@@ -90,11 +91,14 @@ function initHeaderScroll() {
                 header.classList.remove('scrolled');
             }
             
-            // Ocultar/mostrar header en scroll
-            if (currentScroll > lastScroll && currentScroll > 200) {
-                header.style.transform = 'translateY(-100%)';
-            } else {
+            // Solo mostrar header si estamos cerca del inicio (menos de threshold px)
+            if (currentScroll < threshold) {
                 header.style.transform = 'translateY(0)';
+                header.style.opacity = '1';
+            } else {
+                // Ocultar header cuando estamos lejos del inicio
+                header.style.transform = 'translateY(-100%)';
+                header.style.opacity = '0';
             }
             
             lastScroll = currentScroll;

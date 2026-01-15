@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="/css/components.css"> 
         <link rel="stylesheet" href="/css/animations.css"> 
         <link rel="stylesheet" href="/css/responsive.css"> 
-        <style>/* ========== ESTILOS ELEGANTES ========== *//* Header con blur */.header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); } .header.scrolled { background: rgba(255, 255, 255, 0.98); } .header-cert { display: none; margin-left: auto; } .cert-badge { height: 60px; width: auto; } .logo img { height: 65px; } @media (min-width: 1024px) { .header-cert {  display: block; } } /* Section Tag */.section-tag { display: inline-block; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); color: var(--color-white); padding: 0.5rem 1.25rem; border-radius: var(--border-radius-full); font-size: var(--font-size-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; } /* ========== HERO ========== */.hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; } .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; } .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgb(34 34 34 / 92%) 0%, rgb(23 23 23 / 85%) 100%); } .hero-content { position: relative; z-index: 1; text-align: center; padding: 2rem; max-width: 900px; } .hero-title { font-size: clamp(2.25rem, 6vw, 4rem); font-weight: 800; color: var(--color-white); line-height: 1.1; margin-bottom: 1.5rem; } .hero-title .text-orange { color: var(--color-secondary); } .hero-title .glow-text { color: var(--color-white) !important; animation: pulseGlow 3s ease-in-out infinite; } @keyframes pulseGlow { 0%, 100% {  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2); }  50% {  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2); } } .text-orange { color: var(--color-secondary); } .hero-subtitle { font-size: clamp(1rem, 2vw, 1.2rem); color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto 2rem; line-height: 1.8; } .hero-buttons { display: flex; flex-direction: column; gap: 1rem; align-items: center; } @media (min-width: 768px) { .hero-buttons {  flex-direction: row;  justify-content: center; } } /* Scroll Indicator */.scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); color: rgba(255, 255, 255, 0.7); animation: bounce 2s ease-in-out infinite; } @keyframes bounce { 0%, 100% {  transform: translateX(-50%) translateY(0); }  50% {  transform: translateX(-50%) translateY(-10px); } } /* ========== BOTONES CON HOVER ELEGANTE ========== */.btn { position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); } .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s ease; } .btn:hover::before { left: 100%; } .btn-primary:hover { background-color: var(--color-primary-dark); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(26, 77, 140, 0.3); } .btn-white:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3); } .btn-outline-white { background: transparent; border: 2px solid rgba(255, 255, 255, 0.8); color: var(--color-white); } .btn-outline-white:hover { background: var(--color-white); color: var(--color-primary); transform: translateY(-3px); } /* ========== ANIMACIONES DE SCROLL BIDIRECCIONALES ========== */.animate { opacity: 0; transform: translateY(40px); transition: opacity 0.6s ease, transform 0.6s ease; } .animate.from-left { transform: translateX(-40px); } .animate.from-right { transform: translateX(40px); } .animate.from-scale { transform: scale(0.95); } .animate.visible { opacity: 1; transform: translateY(0) translateX(0) scale(1); } /* Delays escalonados */.delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; } .delay-4 { transition-delay: 0.4s; } /* ========== ABOUT SECTION ========== */.about-grid { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 900px; margin: 0 auto; } .about-content h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1.5rem; } .about-content p { font-size: var(--font-size-lg); color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1.5rem; } /* ========== CARDS DE SERVICIOS ========== */.services-grid { display: grid; gap: 2rem; } @media (min-width: 768px) { .services-grid {  grid-template-columns: repeat(2, 1fr); } } .service-card { position: relative; height: 350px; border-radius: var(--border-radius-lg); overflow: hidden; cursor: pointer; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); } .service-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(
+        <style>/* ========== ESTILOS ELEGANTES ========== *//* Header completamente transparente */.header { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; } .header.scrolled { background: transparent; } /* Section Tag */.section-tag { display: inline-block; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); color: var(--color-white); padding: 0.5rem 1.25rem; border-radius: var(--border-radius-full); font-size: var(--font-size-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; } /* ========== HERO ========== */.hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; } .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; } .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgb(34 34 34 / 92%) 0%, rgb(23 23 23 / 85%) 100%); } .hero-content { position: relative; z-index: 1; text-align: center; padding: 2rem; max-width: 900px; } .hero-title { font-size: clamp(2.25rem, 6vw, 4rem); font-weight: 800; color: var(--color-white); line-height: 1.1; margin-bottom: 1.5rem; } .hero-title .text-orange { color: var(--color-secondary); } .hero-title .glow-text { color: var(--color-white) !important; animation: pulseGlow 3s ease-in-out infinite; } @keyframes pulseGlow { 0%, 100% {  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2); }  50% {  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2); } } .text-orange { color: var(--color-secondary); } .hero-subtitle { font-size: clamp(1rem, 2vw, 1.2rem); color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto 2rem; line-height: 1.8; } .hero-buttons { display: flex; flex-direction: column; gap: 1rem; align-items: center; } @media (min-width: 768px) { .hero-buttons {  flex-direction: row;  justify-content: center; } } /* Scroll Indicator */.scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); color: rgba(255, 255, 255, 0.7); animation: bounce 2s ease-in-out infinite; } @keyframes bounce { 0%, 100% {  transform: translateX(-50%) translateY(0); }  50% {  transform: translateX(-50%) translateY(-10px); } } /* ========== BOTONES CON HOVER ELEGANTE ========== */.btn { position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); } .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s ease; } .btn:hover::before { left: 100%; } .btn-primary:hover { background-color: var(--color-primary-dark); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(26, 77, 140, 0.3); } .btn-white:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3); } .btn-outline-white { background: transparent; border: 2px solid rgba(255, 255, 255, 0.8); color: var(--color-white); } .btn-outline-white:hover { background: var(--color-white); color: var(--color-primary); transform: translateY(-3px); } /* ========== ANIMACIONES DE SCROLL BIDIRECCIONALES ========== */.animate { opacity: 0; transform: translateY(40px); transition: opacity 0.6s ease, transform 0.6s ease; } .animate.from-left { transform: translateX(-40px); } .animate.from-right { transform: translateX(40px); } .animate.from-scale { transform: scale(0.95); } .animate.visible { opacity: 1; transform: translateY(0) translateX(0) scale(1); } /* Delays escalonados */.delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; } .delay-4 { transition-delay: 0.4s; } /* ========== ABOUT SECTION ========== */.about-grid { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 900px; margin: 0 auto; } .about-content h2 { font-size: clamp(3.75rem, 4vw, 2.5rem); margin-bottom: 1.5rem; } .about-content p { font-size: var(--font-size-lg); color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1.5rem; } /* ========== CARDS DE SERVICIOS ========== */.services-grid { display: grid; gap: 2rem; } @media (min-width: 768px) { .services-grid {  grid-template-columns: repeat(2, 1fr); } } .service-card { position: relative; height: 350px; border-radius: var(--border-radius-lg); overflow: hidden; cursor: pointer; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); } .service-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(
                 120deg,
                 transparent 0%,
                 rgba(255, 255, 255, 0) 40%,
@@ -26,7 +26,7 @@
                 rgba(255, 255, 255, 0) 60%,
                 transparent 100%
             ); transition: left 0.8s cubic-bezier(0.23, 1, 0.32, 1); z-index: 10; pointer-events: none; } .service-card:hover::before { left: 100%; } .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15),
-                0 0 0 1px rgba(255, 255, 255, 0.1); } .service-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1); } .service-card:hover img { transform: scale(1.05); } .service-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); } .service-card:hover .service-card-overlay { background: linear-gradient(to top, rgba(26, 77, 140, 0.92) 0%, rgba(26, 77, 140, 0.5) 60%, rgba(26, 77, 140, 0.2) 100%); } .service-card-title { font-size: var(--font-size-2xl); font-weight: 700; color: var(--color-white); margin-bottom: 0.75rem; transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1); } .service-card:hover .service-card-title { transform: translateY(-8px); } .service-card-text { font-size: var(--font-size-base); color: rgba(255, 255, 255, 0.9); line-height: 1.6; opacity: 1; transform: translateY(0); transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); } .service-card-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--color-secondary); font-weight: 600; margin-top: 1rem; opacity: 0; max-height: 0; overflow: hidden; transform: translateY(20px); transition: all 0.4s ease 0.1s; } .service-card:hover .service-card-link { opacity: 1; max-height: 50px; transform: translateY(0); } .service-card-link:hover { color: var(--color-white); } .service-card-link svg { transition: transform 0.3s ease; } .service-card-link:hover svg { transform: translateX(5px); } /* ========== PRODUCT CARDS ========== */.product-card { background: var(--color-white); border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05),
+                0 0 0 1px rgba(255, 255, 255, 0.1); } .service-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1); } .service-card:hover img { transform: scale(1.05); } .service-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; align-items: center; text-align: center; padding: 2rem; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); } .service-card:hover .service-card-overlay { background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); } .service-card-title { font-size: var(--font-size-2xl); font-weight: 700; color: var(--color-white); margin-bottom: 0.75rem; transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1); text-align: center; } .service-card:hover .service-card-title { transform: translateY(-8px); } .service-card-text { font-size: var(--font-size-base); color: rgba(255, 255, 255, 0.9); line-height: 1.6; opacity: 1; transform: translateY(0); transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); text-align: center; } .service-card-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--color-secondary); font-weight: 600; margin-top: 1rem; opacity: 0; max-height: 0; overflow: hidden; transform: translateY(20px); transition: all 0.4s ease 0.1s; justify-content: center; } .service-card:hover .service-card-link { opacity: 1; max-height: 50px; transform: translateY(0); } .service-card-link:hover { color: var(--color-white); } .service-card-link svg { transition: transform 0.3s ease; } .service-card-link:hover svg { transform: translateX(5px); } /* ========== PRODUCT CARDS ========== */.product-card { background: var(--color-white); border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05),
                 0 4px 16px rgba(0, 0, 0, 0.05); transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; display: block; text-decoration: none; color: inherit; position: relative; } .product-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(
                 120deg,
                 transparent 0%,
@@ -104,10 +104,12 @@
         </nav>         
         <!-- ========== HERO ========== -->         
         <section class="hero"> 
-            <div class="hero-bg parallax-bg" style="background-image: url('/images/inicio/fabrica_home.png'); background-size: cover; background-position: center;"></div>             
-            <div class="hero-overlay gradient-animated" style="background: linear-gradient(135deg, rgba(20, 20, 20, 0.92) 0%, rgba(30, 30, 30, 0.85) 50%, rgba(255, 255, 255, 0.15) 100%); background-size: 200% 200%;"></div>             
+            <video class="hero-bg parallax-bg" autoplay muted loop playsinline preload="metadata">
+                <source src="/images/inicio/backgroundwork.mp4" type="video/mp4">
+            </video>             
+            <div class="hero-overlay gradient-animated" style="background: linear-gradient(135deg, rgba(20, 20, 20, 0.35) 0%, rgba(30, 30, 30, 0.30) 50%, rgba(255, 255, 255, 0.05) 100%); background-size: 200% 200%;"></div>             
             <div class="hero-content"> 
-                <h1 class="hero-title anim-ready fade-up">  <span class="glow-text text-reveal">Soluciones Industriales</span> de <span class="text-orange">Alta Calidad</span>  </h1> 
+                <h1 class="hero-title anim-ready fade-up">  <span class="text-reveal">Soluciones Industriales</span> de <span class="text-orange">Alta Calidad</span>  </h1> 
                 <p class="hero-subtitle anim-ready fade-up anim-delay-2"> 
                 Somos una empresa especializada en el manejo controlado de la viruta dentro de la industria, ofreciendo una amplia gama de productos específicos para el cuidado de equipos y recursos, resguardando siempre la calidad de las piezas en producción.
  </p> 
@@ -133,7 +135,7 @@
                 <div class="about-grid"> 
                     <div class="about-content anim-ready fade-up"> 
                         <span class="section-tag">Sobre Nosotros</span> 
-                        <h2>LA EMPRESA</h2> 
+                        <h2>La Empresa</h2> 
                         <p> 
                         Somos una empresa especializada en el manejo controlado de la viruta dentro de la industria, ofreciendo una amplia gama de productos específicos para el cuidado de equipos y recursos, resguardando siempre la calidad de las piezas en producción.
  </p> 
@@ -150,10 +152,12 @@
         <!-- ========== PRODUCTOS Y SERVICIOS ========== -->         
         <section class="section section-lg"> 
             <div class="container"> 
-                <div class="section-header text-center anim-ready fade-up"> 
-                    <span class="section-tag">Lo que ofrecemos</span> 
-                    <h2 class="section-title">Productos y Servicios</h2> 
-                    <p class="section-subtitle">Soluciones integrales para la industria metalúrgica y más</p> 
+                <div class="about-grid"> 
+                    <div class="about-content anim-ready fade-up"> 
+                        <span class="section-tag">Lo que ofrecemos</span> 
+                        <h2>Productos y Servicios</h2> 
+                        <p>Soluciones integrales para la industria metalúrgica y más</p>
+                    </div>                     
                 </div>                 
                 <div class="services-grid stagger-group"> 
                     <div class="service-card anim-ready fade-left card-hover-lift img-hover-zoom"> 
@@ -185,75 +189,64 @@
                 </div>                 
             </div>             
         </section>         
-        <!-- ========== PRODUCTOS DESTACADOS ========== -->         
+        <!-- ========== EMPRESAS QUE CONFÍAN EN NOSOTROS ========== -->         
         <section class="section section-lg bg-light"> 
             <div class="container"> 
-                <div class="section-header text-center anim-ready fade-up"> 
-                    <span class="section-tag">Nuestros Productos</span> 
-                    <h2 class="section-title">Productos Destacados</h2> 
-                    <p class="section-subtitle">Equipos de alta calidad para la industria</p> 
-                </div>                 
-                <div class="grid grid-4 stagger-group"> 
-                    <!-- Máquinas Lavadoras -->                     
-                    <a href="/productos#maquinas" class="product-card anim-ready scale-in card-hover-lift card-tilt">  <div class="product-image img-hover-zoom"> 
-                            <img src="/images/productos/maquinas lavadoras/1.png" alt="Máquinas Lavadoras"> 
-                        </div>  <div class="product-body"> 
-                            <h3 class="product-title">MÁQUINAS LAVADORAS</h3> 
-                            <p class="product-description"> 
-                            Lavadoras especiales de piezas que garantizan la calidad y estabilidad del proceso siguiente en líneas continuas de producción.
- </p> 
-                            <span class="product-link"> 
-                            Ver más
- <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>                                     
-                                    <polyline points="12 5 19 12 12 19"></polyline>                                     
-                                </svg>  </span> 
-                        </div>  </a> 
-                    <!-- Protectores Telescópicos -->                     
-                    <a href="/productos#protectores" class="product-card anim-ready scale-in card-hover-lift card-tilt">  <div class="product-image img-hover-zoom"> 
-                            <img src="/images/productos/protectores telescopicos/1.png" alt="Protectores Telescópicos"> 
-                        </div>  <div class="product-body"> 
-                            <h3 class="product-title">PROTECTORES TELESCÓPICOS</h3> 
-                            <p class="product-description"> 
-                            Protectores de bancada para máquinas de mecanizado para el cuidado de los mecanismos de accionamiento y de las bancadas.
- </p> 
-                            <span class="product-link"> 
-                            Ver más
- <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>                                     
-                                    <polyline points="12 5 19 12 12 19"></polyline>                                     
-                                </svg>  </span> 
-                        </div>  </a> 
-                    <!-- Extractores de Viruta -->                     
-                    <a href="/productos#extractores" class="product-card anim-ready scale-in card-hover-lift card-tilt">  <div class="product-image img-hover-zoom"> 
-                            <img src="/images/productos/extractores de viruta y cintas transportadoras/1.png" alt="Extractores de Viruta"> 
-                        </div>  <div class="product-body"> 
-                            <h3 class="product-title">EXTRACTORES DE VIRUTA</h3> 
-                            <p class="product-description"> 
-                            Extractores de viruta, centrales de filtrado, carenado o carrocerías de máquinas.
- </p> 
-                            <span class="product-link"> 
-                            Ver más
- <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>                                     
-                                    <polyline points="12 5 19 12 12 19"></polyline>                                     
-                                </svg>  </span> 
-                        </div>  </a> 
-                    <!-- Cintas Transportadoras -->                     
-                    <a href="/productos#extractores" class="product-card anim-ready scale-in card-hover-lift card-tilt">  <div class="product-image img-hover-zoom"> 
-                            <img src="/images/productos/extractores de viruta y cintas transportadoras/2.png" alt="Cintas Transportadoras"> 
-                        </div>  <div class="product-body"> 
-                            <h3 class="product-title">CINTAS TRANSPORTADORAS</h3> 
-                            <p class="product-description"> 
-                            Equipos de transporte y sistemas de lavado para industrias como la metalúrgica, frutihortícola, alimenticia y más.
- </p> 
-                            <span class="product-link"> 
-                            Ver más
- <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>                                     
-                                    <polyline points="12 5 19 12 12 19"></polyline>                                     
-                                </svg>  </span> 
-                        </div>  </a> 
+                <div class="about-grid">
+                    <div class="about-content anim-ready fade-up">
+                        <span class="section-tag">Nuestros Clientes</span>
+                        <h2>Empresas que confían en nosotros</h2>
+                        <p>Trabajamos con las empresas más importantes de la industria</p>
+                    </div>
+                </div>
+                <div class="clients-carousel-wrapper anim-ready fade-up">
+                    <div class="clients-carousel">
+                        <div class="clients-track">
+                            <div class="client-logo">
+                                <img src="/images/clientes/volkswagen.png" alt="Volkswagen">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/scania.png" alt="Scania">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/ait.png" alt="AIT Automatización e Ingeniería Tecnológica">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/pertrak.png" alt="Pertrak">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/santander.png" alt="Santander">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/cimcc.png" alt="CIMCC">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/21.png" alt="Cliente 21">
+                            </div>
+                            <!-- Duplicados para loop infinito -->
+                            <div class="client-logo">
+                                <img src="/images/clientes/volkswagen.png" alt="Volkswagen">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/scania.png" alt="Scania">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/ait.png" alt="AIT Automatización e Ingeniería Tecnológica">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/pertrak.png" alt="Pertrak">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/santander.png" alt="Santander">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/cimcc.png" alt="CIMCC">
+                            </div>
+                            <div class="client-logo">
+                                <img src="/images/clientes/21.png" alt="Cliente 21">
+                            </div>
+                        </div>
+                    </div>
                 </div>                 
             </div>             
         </section>         

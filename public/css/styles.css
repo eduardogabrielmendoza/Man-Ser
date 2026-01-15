@@ -320,31 +320,41 @@ button {
     left: 0;
     right: 0;
     z-index: var(--z-fixed);
-    background-color: var(--color-white);
-    box-shadow: var(--shadow-md);
-    transition: all var(--transition-base);
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, transform 0.3s ease;
 }
 
 .header.scrolled {
-    box-shadow: var(--shadow-lg);
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
 }
 
 .header-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) auto minmax(100px, 1fr);
     align-items: center;
-    justify-content: space-between;
-    padding: var(--spacing-md) var(--container-padding);
-    margin: 0 auto;
+    padding: var(--spacing-md) 0;
+    margin: 0;
+    max-width: none;
+    width: 100vw;
+    gap: 2rem;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
+    justify-self: start;
+    padding-left: 0.5rem;
 }
 
 .logo img {
-    height: 50px;
+    height: 65px;
     width: auto;
 }
 
@@ -356,9 +366,7 @@ button {
 
 .nav {
     display: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-self: center;
 }
 
 .nav-list {
@@ -370,7 +378,7 @@ button {
 .nav-link {
     font-size: var(--font-size-base);
     font-weight: 500;
-    color: var(--color-gray-700);
+    color: #ffffff;
     padding: var(--spacing-sm) 0;
     position: relative;
     transition: color var(--transition-fast);
@@ -383,18 +391,30 @@ button {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-primary);
+    background-color: #d1d5db;
     transition: width var(--transition-base);
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--color-primary);
+    color: #ffffff;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
+}
+
+/* Certificación ISO */
+.header-cert {
+    display: none;
+    justify-self: end;
+    padding-right: 0.5rem;
+}
+
+.cert-badge {
+    height: 60px;
+    width: auto;
 }
 
 /* Menú móvil */
@@ -404,13 +424,15 @@ button {
     gap: 5px;
     padding: var(--spacing-sm);
     cursor: pointer;
+    justify-self: end;
+    padding-right: 0.5rem;
 }
 
 .menu-toggle span {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--color-gray-800);
+    background-color: #ffffff;
     border-radius: 2px;
     transition: all var(--transition-base);
 }
@@ -547,17 +569,29 @@ button {
     background-position: center;
     background-repeat: no-repeat;
     color: var(--color-white);
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
 .hero-overlay {
     position: absolute;
+    z-index: 2;
     inset: 0;
     background: linear-gradient(135deg, rgba(26, 77, 140, 0.9) 0%, rgba(13, 58, 110, 0.8) 100%);
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     text-align: center;
     padding: var(--spacing-2xl);
     max-width: 900px;
@@ -802,6 +836,10 @@ button {
     }
     
     .nav {
+        display: block;
+    }
+    
+    .header-cert {
         display: block;
     }
     

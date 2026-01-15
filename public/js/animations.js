@@ -327,6 +327,7 @@
         if (!header) return;
         
         let lastScroll = 0;
+        const threshold = 100; // Umbral para considerar "cerca del inicio"
         
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
@@ -338,12 +339,14 @@
                 header.classList.remove('scrolled');
             }
             
-            // Hide/show on scroll (opcional)
-            // if (currentScroll > lastScroll && currentScroll > 200) {
-            //     header.classList.add('header-hidden');
-            // } else {
-            //     header.classList.remove('header-hidden');
-            // }
+            // Solo mostrar header si estamos cerca del inicio
+            if (currentScroll < threshold) {
+                header.style.transform = 'translateY(0)';
+                header.style.opacity = '1';
+            } else {
+                header.style.transform = 'translateY(-100%)';
+                header.style.opacity = '0';
+            }
             
             lastScroll = currentScroll;
         }, { passive: true });
